@@ -1,26 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meteora</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Organização de Treino Semanal</title>
+    <style type="text/css">
+        .table {
+            width: 80%;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .table-dark {
+            background-color: #4A148C; /* Roxo escuro */
+            color: white;
+        }
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(74, 20, 140, 0.1); /* Roxo claro */
+        }
+        .table-striped tbody tr:nth-of-type(even) {
+            background-color: rgba(0, 0, 0, 0.1); /* Preto claro */
+        }
+        .table-bordered th, .table-bordered td {
+            border: 1px solid #4A148C; /* Roxo escuro */
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section h2 {
+            color: #4A148C;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar bg-body-tertiary fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4A148C;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">offcanvas navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">Treino Semanal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#planos">Planos</a>
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
-            
+
+    <div class="section">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Dia</th>
+                    <th>Treino</th>
+                    <th>Duração</th>
+                    <th>Intensidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda-feira</td>
+                    <td>Cardio</td>
+                    <td>45 min</td>
+                    <td>Média</td>
+                </tr>
+                <tr>
+                    <td>Terça-feira</td>
+                    <td>Musculação (Superior)</td>
+                    <td>1 hora</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>Quarta-feira</td>
+                    <td>Yoga</td>
+                    <td>1 hora</td>
+                    <td>Baixa</td>
+                </tr>
+                <tr>
+                    <td>Quinta-feira</td>
+                    <td>Musculação (Inferior)</td>
+                    <td>1 hora</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>Sexta-feira</td>
+                    <td>HIIT</td>
+                    <td>30 min</td>
+                    <td>Alta</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>Alongamento</td>
+                    <td>30 min</td>
+                    <td>Baixa</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Descanso</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Seção de Planos -->
+    <div id="planos" class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="text-center">Nossos Planos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Plano Básico</h5>
+                            <p class="card-text">Acesso a treinos básicos e dicas de alimentação.</p>
+                            <p class="card-text"><strong>R$ 50/mês</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Plano Intermediário</h5>
+                            <p class="card-text">Treinos personalizados e suporte por e-mail.</p>
+                            <p class="card-text"><strong>R$ 100/mês</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Plano Avançado</h5>
+                            <p class="card-text">Treinos personalizados, suporte 24/7 e consultoria.</p>
+                            <p class="card-text"><strong>R$ 150/mês</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contato" class="section">
+        <div class="container">
+            <h2 class="text-center">Contato</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
